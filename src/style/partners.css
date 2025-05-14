@@ -1,0 +1,127 @@
+:root {
+  --accent: #ff8e00;
+  --main-grad: linear-gradient(#FFAA00, #FF7400, #FF5900);
+}
+
+.partners-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100vh;
+  background: url('../public/assets/partners.jpg') no-repeat center/cover;
+  width: 100%;
+  padding: 0 5%;
+}
+
+.text-section {
+  max-height: 92vh;
+  padding-right: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 0.5rem;
+  margin-left: auto;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.heading {
+  background: var(--main-grad);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: 'Roboto', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 250;
+  text-align: start;
+}
+
+.description {
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.937em;
+  font-weight: 400;
+  line-height: 1.25rem;
+  color: rgb(90, 90, 90);
+  margin-bottom: 0.9375rem;
+  max-width: 350px;
+  transition: color 0.3s ease; /* Smooth transition for hover */
+}
+
+.description:hover {
+  color: var(--accent);
+}
+
+@media (max-width: 1200px) {
+  .heading {
+    font-size: 2rem;
+  }
+  .description {
+    font-size: 0.875em;
+  }
+}
+
+@media (max-width: 1000px) {
+  .partners-container {
+    justify-content: center;
+    padding: 0 2%;
+    background-position: right center; /* Shift the background to the left */
+    background-size: auto 180%
+  }
+  .text-section {
+    max-height: 92vh;
+    padding-right: 30px;
+    margin-left: 0;
+    padding-inline: 10px;
+  }
+  .heading {
+    font-size: 1.75rem;
+  }
+  .description {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .partners-container {
+    background-position: right center; /* Shift the background to the left */
+    background-size: auto 150%; 
+  }
+  .partners-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1%;
+  }
+  .text-section {
+    align-items: center;
+    text-align: center;
+    max-width: 100%;
+    padding: 20px;
+    max-height: 92vh;
+   padding-right: 30px;
+  }
+  .heading {
+    font-size: 1.5rem;
+  }
+  .description {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .heading {
+    font-size: 1.25rem;
+  }
+  .description {
+    font-size: 0.75em;
+  }
+}
+@media (max-height: 500px) {
+  .partners-container {
+    justify-content: right;
+   max-height: 92vh;
+  padding-right: 30px;
+
+  }
+}

@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300&display=swap');
+
+:root {
+    --accent: #ff8e00;
+    --main-grad: linear-gradient(#FFAA00, #FF7400, #FF5900);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.contact-details {
+        position: fixed;
+        margin-top: auto; /* Pushes it to the end of the flex column */
+        padding: 40px 0 60px 0px; /* Adjust the bottom padding */
+    }
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 15px;
+    background-color: transparent;
+}
+
+.navbar-logo {
+    height: auto;
+    margin-right: 10px;
+}
+
+.logo-title {
+    font-size: 29px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    transition: color 1s ease-in-out;
+}
+
+.gradient_color_logo {
+    color: var(--accent);
+    background: var(--main-grad);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    transition: background 1s ease-in-out;
+}
+
+.white_color_logo {
+    color: white;
+    transition: color 1s ease-in-out;
+}
+
+.small-symbol {
+    font-size: 0.5em;
+    vertical-align: super;
+}
+
+.navbar .logo a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    position: relative;
+}
+
+.nav-links {
+    list-style-type: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh; /* Adjusted for mobile viewport */
+    width: 300px;
+    background-color: var(--accent);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 15px;
+    transition: transform 0.3s cubic-bezier(0.5, 0.05, 0.5, 0.95);
+    transform: translateX(100%);
+    z-index: 999;
+    padding: 100px 0 180px 40px; /* Adjust the bottom padding */
+    background: linear-gradient(to bottom, #FF8C00, #FF7B00, #FF6600);
+}
+
+.nav-links.open {
+    transform: translateX(0);
+}
+
+.nav-links li {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    line-height: 0.7;
+    padding-left: 20px;
+}
+
+.nav-links.open li {
+    opacity: 1;
+}
+
+.nav-links li a {
+    color: white;
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+    text-shadow: 2px 2px 2px rgba(0, 0.2, 0, 0.2);
+}
+
+.hamburger {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    z-index: 1001;
+    position: relative;
+    padding: 10px;
+    transition: background-color 1s ease-in-out;
+}
+
+.hamburger div {
+    width: 30px;
+    height: 3px;
+    background-color: var(--accent);
+    transition: background-color 0.5s ease-in-out;
+}
+
+.white-hamburger div {
+    background-color: white !important;
+    transition: background-color 0.5s ease-in-out;
+}
+
+.hamburger div:nth-of-type(1),
+.hamburger div:nth-of-type(3) {
+    width: 20px;
+}
+
+@media (max-width: 768px) {
+    .contact-details {
+        position: relative;
+        margin-top: auto; /* Pushes it to the end of the flex column */
+        padding: 10px 20px;
+    }
+    .navbar {
+        flex-direction: row;
+        padding: 15px 10px;
+    }
+
+    .logo-title {
+        font-size: 14px;
+    }
+
+    .nav-links {
+        width: 250px;
+    }
+
+    .nav-links li a {
+        font-size: 1.2em;
+    }
+
+    .hamburger {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-title {
+        font-size: 20px;
+    }
+
+    .nav-links {
+        width: 80%; /* Slightly narrower for mobile */
+        padding: 20px 0 60px 40px; /* Adjust the bottom padding */
+        gap: 10px; /* Reduce gap between items */
+    }
+
+    .nav-links li a {
+        font-size: 1.4rem; /* Slightly reduce font size */
+    }
+}
+
+.contact-details {
+    text-align: left;
+    color: white;
+    padding: 20px 0 0 20px; /* Reduced top padding to bring the content up */
+    font-size: 1rem;
+    position: fixed;
+    bottom: 5rem; /* Adjusted to move the content up; decrease this value to bring it higher */
+    font-weight: 300 !important;
+    line-height: 1.5 !important;
+}
+
+.contact-details a {
+    color: white;
+    text-decoration: underline;
+    font-size: 1rem !important;
+}
+
+.logo-animation, .title-animation {
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@media (max-height: 450px) {
+    .nav-links {
+        gap: 1px;
+    }
+    .nav-links li a {
+        font-size: 0.7rem;
+    }
+    .contact-details {
+        font-size: 0.7rem;
+    }
+}
+
+/* Overlay styles */
+.menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: transparent;
+    z-index: 998;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+}
+
+.menu-overlay.open {
+    opacity: 1;
+    visibility: visible;
+}

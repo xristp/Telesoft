@@ -1,0 +1,257 @@
+:root { 
+  --background-color: white;
+  --accent-color: #ff8e00;
+}
+
+.contact-section {
+ 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--background-color);
+  width: 100%;
+  height: 100vh; /* Changed from min-height to height */
+  max-height: 100vh; /* Prevents overflow by setting max height */
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.contact-box {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 0;
+  margin-bottom: 2rem;
+  overflow: hidden;
+}
+
+.company-info {
+  width: 30%;
+  max-width: 600px;
+  text-align: center;
+  margin-bottom: 20px;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.company-info h2 {
+  color: #f7941e;
+  font-size: 1.7rem;
+}
+
+.company-info p {
+  color: #ff8e00;
+  font-size: 1.3rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.company-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.company-details p {
+  max-width: fit-content;
+  overflow-wrap: break-word;
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.map-box {
+  text-align: left;
+  width: 100%;
+}
+
+.map-box h2 {
+  color: #f7941e;
+  font-size: 1rem;
+  text-align: left;
+  margin-bottom: 5px;
+}
+
+iframe {
+  width: 100%;
+  height: 300px;
+  border: 0;
+  margin-top: 20px;
+  max-height: 300px;
+}
+
+/* Media Query for screens with max-height of 500px */
+@media (max-height: 500px) {
+  .map-box {
+    display: none; /* Hide the map on short screens */
+  }
+
+  .contact-section {
+    justify-content: center; /* Center content vertically */
+    padding: 10px; /* Reduce padding for smaller heights */
+  }
+
+  .company-info {
+    width: 80%; /* Increase width for better readability */
+    max-width: 100%; /* Allow it to fill the available width */
+    min-height: 200px; /* Ensure minimum height for readability */
+  }
+}
+
+/* Other responsive adjustments */
+
+@media (max-width: 1024px) {
+  .contact-box {
+    flex-direction: row;
+    gap: 2rem;
+  }
+
+  .company-info {
+    width: 45%;
+  }
+
+  iframe {
+    height: 250px;
+  }
+
+  .company-info h2 {
+    font-size: 1.7rem;
+  }
+
+  .company-info p {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-box {
+    flex-direction: row;
+  }
+
+  .company-info {
+    width: 100%;
+  }
+
+  .map-box {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .company-info {
+    width: 100%;
+    margin-bottom: 30px;
+    max-height: 92vh;
+    padding-right: 5px;
+  }
+
+  iframe {
+    height: 180px;
+  }
+
+  .company-info h2 {
+    font-size: 1.3rem;
+  }
+
+  .company-info p {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-height: 900px) {
+  .contact-section {
+    justify-content: space-between;
+  }
+  
+  .contact-box {
+    margin-top: 80px;
+    gap: 0.5;
+    margin-bottom: 0;
+  }
+
+  .company-info h2 {
+    font-size: 1.1rem;
+  }
+
+  .company-info p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-height: 730px) {
+  .contact-section {
+    gap: 1rem;
+  }
+
+  .company-info h2 {
+    font-size: 1rem;
+  }
+
+  .company-info p {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-height: 540px) {
+  .company-info {
+    max-height: 92%;
+    width: 45%;
+    text-align: center;
+    font-size: 1em;
+  }
+
+  .contact-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .company-info h2 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .company-info p {
+    font-size: 0.8rem;
+    line-height: 1.4;
+    margin: 0;
+  }
+
+  .contact-section {
+    gap: 0.5rem;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .company-info h2 {
+    font-size: 1.1rem;
+    max-height: 92vh;
+    padding-right: 5px;
+  }
+
+  .company-info p {
+    font-size: 0.9rem;
+  }
+
+  .contact-box {
+    gap: 0.5rem;
+  }
+
+  .contact-section {
+    padding: 5px;
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+  }
+}
+@media (max-height: 580px) {
+  .map-box {
+    display: none;
+  }
+}

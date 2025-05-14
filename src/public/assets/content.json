@@ -1,0 +1,159 @@
+{
+  "sections": [
+    {
+      "id": "home",
+      "name": "Home",
+      "title": "Your Vision\nOur Mission"
+    },
+    {
+      "id": "about",
+      "name": "About us",
+      "component": "About",
+      "leftText": "TELESOFT Backend Development Solutions GR is a technology company that delivers integrated back-end solutions, advanced technologies, and related services across multiple industries in both the Greek and international markets, with a particular emphasis on enhancing operational efficiencies.",
+      "rightText": [
+        "In just over five years of operation, Telesoft has achieved remarkable growth, successfully executing numerous high-impact projects and solidifying its presence within the IT consulting landscape. We have partnered with leading institutions and IT firms across various sectors, establishing ourselves as a trusted provider in back-end development.",
+        "With a team of highly skilled professionals in the back-end technology domain, we uphold a commitment to a defined set of values, laying a strong foundation for achieving successful outcomes in all of our projects."
+      ]
+    },
+    {
+      "id": "whoweare",
+      "name": "Who We Are",
+      "component": "Whoweare",
+      "highlightText": "We deliver Backend Solutions.",
+      "mainText": "At Telesoft, we harness the expertise of our dedicated team in backend technology implementation from diverse industries, ensuring optimal performance and scalability for our clients. With extensive experience gained in the software development market, we capitalize on our successful track record and innovative approaches. Our vast network of collaborators, partners, and industry professionals enables us to:",
+      "bulletPoints": [
+        "Deliver robust solutions on time and within budget.",
+        "Develop and implement strategies for sustainable growth.",
+        "Navigate and manage projects across various markets."
+      ],
+      "closingText": "With a distinguished team of backend developers and technical consultants, our founding team has over 25 years of experience in backend IT solutions, holding prominent positions in technology firms and leading projects that drive success."
+    },
+    {
+      "id": "leadership",
+      "name": "Leadership",
+      "component": "Leadership",
+      "leaders": [
+        {
+          "name": "Xrhstos Polypathelis",
+          "title": "Frontend Master Developer",
+          "description": "Xrhstos is an expert in frontend technologies, specializing in building responsive and dynamic user interfaces. With a deep understanding of modern frameworks and design principles, he transforms complex requirements into seamless digital experiences. His passion for coding and commitment to excellence make him a key player in the development team."
+        },
+        {
+          "name": "Xrhstos Polypathelis",
+          "title": "Backend Professional Developer",
+          "description": "As a Backend Professional Developer, Xrhstos excels in creating robust and scalable server-side applications. His expertise includes database management, API development, and cloud services. With a focus on performance and security, he ensures that the backend systems run efficiently and meet the demands of the business. His collaborative approach enhances team dynamics and drives innovation."
+        },
+        {
+          "name": "Xrhstos Polypathelis",
+          "title": "Backend Professional Developer",
+          "description": "As a Backend Professional Developer, Xrhstos excels in creating robust and scalable server-side applications. His expertise includes database management, API development, and cloud services. With a focus on performance and security, he ensures that the backend systems run efficiently and meet the demands of the business. His collaborative approach enhances team dynamics and drives innovation."
+        }
+      ]
+    },
+    {
+      "id": "productline",
+      "name": "Product Line",
+      "component": "Productline",
+      "products": [
+        {
+          "id": 1,
+          "label": "Relational Database Management System",
+          "description": "A Relational Database Management System (RDBMS) is engineered to efficiently manage structured data, ensuring data consistency, security, and integrity across applications. It provides bank and enterprise teams with robust tools for managing customer data, transactions, and core operational records. This system simplifies tasks such as account management, transaction processing, and regulatory compliance by allowing data to be easily queried and updated. With a focus on high-performance and secure data handling, RDBMS solutions streamline operations and support scalable growth across your organization."
+        },
+        {
+          "id": 2,
+          "label": "NoSQL Database Solutions",
+          "description": "Our NoSQL Database Solutions are designed to handle diverse and dynamic data structures, offering unparalleled flexibility for today’s data-driven environments. Unlike traditional databases, NoSQL solutions can manage unstructured and semi-structured data, making them ideal for managing large volumes of rapidly changing information. These solutions empower modern applications with the agility to support customer personalization, social interactions, and real-time analytics. Embrace scalability and adapt to the complexities of modern data without compromising performance or reliability."
+        },
+        {
+          "id": 3,
+          "label": "Cloud Database Services",
+          "description": "Cloud Database Services provide seamless scalability and accessibility, offering banks and businesses the agility needed to operate in today’s digital-first environment. With data hosted securely in the cloud, your team can access and manage critical databases from anywhere, at any time. This solution supports automatic backups, disaster recovery, and on-demand scaling, helping you reduce operational costs while ensuring data availability and security. Cloud Database Services bring the flexibility and resilience needed to power modern applications and digital transformation initiatives."
+        },
+        {
+          "id": 4,
+          "label": "In-Memory Database Systems",
+          "description": "In-Memory Database Systems are designed for real-time data processing and analytics, providing rapid access to large datasets by storing data in RAM instead of traditional disk storage. This system is ideal for time-sensitive applications, such as transaction processing, fraud detection, and customer personalization, where speed and performance are critical. By reducing latency and maximizing data throughput, In-Memory Database Systems help organizations respond instantly to customer needs, driving customer satisfaction and operational efficiency."
+        },
+        {
+          "id": 5,
+          "label": "Graph Database Solutions",
+          "description": "Graph Database Solutions are specifically tailored to handle complex relationships and interconnected data, making them the perfect choice for applications such as fraud detection, recommendation engines, and social networks. By efficiently mapping and analyzing relationships, Graph Databases can uncover patterns and insights that would be challenging to detect with traditional databases. This solution enables you to explore and understand data connections deeply, providing a strategic advantage for applications requiring a focus on relationships and linkages."
+        },
+        {
+          "id": 6,
+          "label": "Time-Series Databases",
+          "description": "Time-Series Databases are optimized for handling data with time-stamped entries, such as financial transactions, sensor data, and system logs. These databases are ideal for tracking changes over time, making them essential for monitoring trends, forecasting, and analyzing performance metrics. Time-Series Databases provide high-write throughput and efficient storage, allowing you to store and analyze massive amounts of time-based data with ease. Empower your team with a solution designed to offer insights from historical and real-time data, helping to drive proactive and data-informed decision-making."
+        }
+      ]
+    },
+    {
+      "id": "partners",
+      "name": "Partners",
+      "component": "Partners",
+      "mainText": [
+        "A network of associates and partners is already available to facilitate our efforts. For every solution we represent, we acquire the necessary competence to participate in relevant implementations and add significant value to the End Customer. Our sales experts are trained and prepared to act as senior management consultants for all promoted products.",
+        "Vendor participation, close attention, and support are always guaranteed."
+      ]
+    },
+    {
+      "id": "wehire",
+      "name": "We Hire",
+      "component": "WeHire",
+      "positions": [
+        {
+          "id": "frontend",
+          "title": "Front-End Developer",
+          "description": "Join our team to build stunning user interfaces.",
+          "requirements": [
+            "Strong experience with React and CSS",
+            "Knowledge of modern JavaScript (ES6+)",
+            "Understanding of responsive design"
+          ]
+        },
+        {
+          "id": "backend",
+          "title": "Back-End Developer",
+          "description": "Help us develop robust server-side applications.",
+          "requirements": [
+            "Proficiency in Node.js and Express",
+            "Experience with databases (SQL and NoSQL)",
+            "Familiarity with RESTful APIs"
+          ]
+        },
+        {
+          "id": "ai",
+          "title": "AI Engineer",
+          "description": "Work on cutting-edge AI technologies with us.",
+          "requirements": [
+            "Experience with machine learning frameworks",
+            "Strong Python programming skills",
+            "Understanding of data structures and algorithms"
+          ]
+        }
+      ],
+      "email": "telecookies4@gmail.com"
+    },
+    {
+      "id": "contact",
+      "name": "Contact",
+      "component": "Contact",
+      "companyDetails": [
+        {
+          "name": "Telesoft Backend Solutions GR LTD",
+          "address": "Akti Themistokleous 70, 189 02, Athens, Greece",
+          "phone": "+30 210 xxx xxxx",
+          "email": "info@Telesoft.com",
+          "website": "www.telesoft.com"
+        },
+        {
+          "name": "Telesoft Backend Solutions GR LTD",
+          "address": "Akti Themistokleous 70, 2064, Salamina, Greece",
+          "phone": "+357 22 419910",
+          "email": "info@Telesoft.com",
+          "website": "www.telesoft.com"
+        }
+      ]
+    }
+  ]
+}

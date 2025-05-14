@@ -1,0 +1,165 @@
+:root {
+    --alignment: flex-start; 
+    --text-align: left;       
+    --direction: column;      
+    --accent: #ff8e00;
+    --main-grad: linear-gradient(#FFAA00, #FF7400, #FF5900);
+}
+
+.leadership-container {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: flex-start;
+    width: 100%;
+    min-height: 100vh;
+    height: 100vh;
+    padding: 50px 20px;
+    background-image: url('../public/assets/background9.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    overflow-y: auto;
+    position: relative;
+}
+
+.leadership-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.leadership-container::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+}
+
+.leadership-cards {
+    max-height: 91vh;
+    padding-right: 25px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px 15px;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+.leadership-card {
+    display: flex;
+    flex-direction: var(--direction);
+    align-items: var(--alignment);
+    justify-content: flex-start;
+    text-align: var(--text-align);
+    width: 100%;
+    max-width: 400px;
+    padding: 15px;
+    box-sizing: border-box;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.leadership-card:hover {
+    transform: translateY(-5px);
+}
+
+.leader-photo {
+    width: 120px;
+    height: 120px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.leader-name {
+    font-size: 1.6rem;
+    color: white;
+    margin-bottom: 5px;
+    font-weight: 300;
+}
+
+.leader-title {
+    font-size: 1rem;
+    color: white;
+    margin-bottom: 15px;
+    font-weight: 400;
+}
+
+.leader-description {
+    font-size: 0.9rem;
+    color: white;
+    line-height: 1.4;
+    max-width: 350px;
+    margin: 0;
+}
+
+@media (max-width: 1024px) {
+    .leadership-cards {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+    }
+}
+
+@media (max-width: 920px) {
+    .leadership-cards {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .leader-photo {
+        width: 100px;
+        height: 100px;
+        margin: 0 auto;
+    }
+
+    .leadership-card {
+        text-align: center;
+    }
+
+    .leader-name {
+        font-size: 1.4rem;
+    }
+
+    .leader-title {
+        font-size: 0.9rem;
+    }
+
+    .leader-description {
+        font-size: 0.8rem;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 480px) {
+    
+    .leadership-cards {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .leader-photo {
+        width: 80px;
+        height: 80px;
+        margin-bottom: 5px;
+    }
+
+    .leader-name {
+        font-size: 1.2rem;
+    }
+
+    .leader-title{
+        font-size: 0.8rem;
+    }
+
+    .leader-description {
+        font-size: 0.7rem;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    .leadership-container {
+        padding-bottom: 50px;
+    }
+}

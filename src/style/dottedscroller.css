@@ -1,0 +1,106 @@
+:root {
+    --accent: #ff8e00;
+    --main-grad: linear-gradient(to bottom, #FFAA00, #FF7400, #FF5900);
+}
+
+.dotted-scroller {
+    position: fixed;
+    z-index: 100;
+    top: 40%;
+    opacity: 100%;
+    transform: translate3d(0, 0, 0);
+    right: 15px;
+}
+
+.sect-dot {
+    display: block;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    text-decoration: none;
+    padding: 15px 17px;
+}
+
+.sect-dot span {
+    border-radius: 50%;
+    position: absolute;
+    z-index: 1;
+    height: 6px;
+    width: 6px;
+    left: 50%;
+    top: 50%;
+    display: block;
+    margin: -3px 0 0 -3px;
+    transition: transform 0.1s ease-in-out, background-color 0.2s ease 0.3s, box-shadow 0.25s ease-out;
+    box-shadow: inset 0 0 0 8px rgba(255, 142, 0, 0.3);
+}
+
+.sect-dot.active span {
+    height: 12px;
+    width: 12px;
+    margin: -6px 0 0 -6px;
+    border-radius: 100%;
+    box-shadow: inset 0 0 0 2px rgba(255, 142, 0, 0.8);
+}
+
+.active-dot {
+    background-color: white;
+    box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.8);
+}
+
+.inactive-dot-white {
+    background-color: rgba(255, 255, 255, 0.5); /* White with 50% opacity */
+    box-shadow: inset 0 0 0 8px rgba(255, 255, 255, 0.3); /* Adjust shadow as needed */
+}
+
+.dot-label {
+    position: absolute;
+    right: 150%;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    color: var(--accent, #ff8e00);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    pointer-events: none;
+    border-left: 2px solid var(--accent, #ff8e00);
+    padding-left: 5px;
+    margin-left: 5px;
+    white-space: nowrap;
+}
+
+.dot-label.active-text {
+    color: white;
+    border-left: 2px solid white;
+}
+
+.sect-dot:hover .dot-label {
+    right: 120%;
+    opacity: 1;
+    transform: translateY(-50%) translateX(-10px);
+}
+
+.dotted-scroller li {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    list-style: none;
+}
+
+.sect-dot:hover span {
+    transform: scale(1.5);
+    transition: transform 0.5s ease-in-out;
+}
+
+@media (max-width: 480px) { /* Adjust this breakpoint if needed */
+    .dot-label {
+        font-size: 10px; /* Adjust this size as needed for smaller screens */
+    }
+    .dotted-scroller {
+        right: 2px;
+    }
+}

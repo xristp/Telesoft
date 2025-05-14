@@ -1,0 +1,209 @@
+/* app.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;300;400&display=swap');
+
+:root {
+    --accent: #ff8e00;
+    --main-grad: linear-gradient(to bottom, #FFAA00, #FF7400, #FF5900);
+    --navbar-bg: rgba(51, 51, 51, 0.7);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #0a0a0a;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow-x: hidden;
+}
+
+.app-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    overflow-y: auto;
+}
+
+.navbar {
+    background-color: var(--navbar-bg);
+    flex-shrink: 0;
+}
+
+.footer {
+    text-align: center;
+    background-color: #f1f1f1;
+    width: 100%;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.info-text {
+    position: absolute;
+    left: 12.875rem;
+    top: 15rem;
+    text-align: left;
+    font-size: 1.6rem;
+    z-index: 2; 
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-weight: 100;
+    letter-spacing: 0.05em;
+    line-height: 1.2;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+/* Parallax card styles */
+.parallax-card {
+    position: fixed; /* Fixed position for desktop */
+    width: 100%;
+    height: 100vh;
+    z-index: 9;
+    display: flex;
+    transition: .8s ease;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000000; /* Fallback background color */
+    perspective: 1000px; /* Added for 3D effects */
+}
+
+.parallax-card.current {
+    top: 0;
+}
+
+/* Enhanced CSS for the scroll-up animation */
+.parallax-card.before {
+    top: 0;
+    transform-origin: center;
+    animation: beforecard 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes beforecard {
+    0% {
+        transform: translateY(0) scale(1) rotate(0deg);
+        opacity: 1;
+    }
+    50% {
+        transform: translateY(-50vh) scale(0.8) rotate(-5deg);
+        opacity: 0.7;
+    }
+    100% {
+        transform: translateY(-100vh) scale(0.6) rotate(-10deg);
+        opacity: 0;
+    }
+}
+
+.parallax-card.next {
+    top: 100%;
+    transform-origin: center;
+    animation: nextcard .8s ease forwards;
+}
+
+.parallax-card:not(.current) {
+    transition: top 0.5s ease;
+    top: 100%;
+}
+
+/* Adjust styles for mobile */
+.parallax-card.no-parallax {
+    position: relative; /* Disable fixed positioning on mobile */
+    height: auto; /* Allow cards to adjust height */
+    overflow: visible; /* Allow overflow for normal scrolling */
+    transform: none; /* Remove any transformations */
+    transition: none; /* Disable transitions */
+}
+
+#parallax-card_home {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh; /* Ensure it covers the full viewport height */
+    width: 100vw; /* Ensure it covers the full viewport width */
+}
+
+@keyframes nextcard {
+    from {
+        top: 0;
+        transform: scale(1);
+    }
+    to {
+        top: 100%;
+        transform: scale(0.5);
+    }
+}
+
+.animated-text:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.animated-text:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+.animated-text:nth-child(3) {
+    animation-delay: 0.2s;
+}
+
+@media (max-width: 1024px) {
+    .info-text {
+        left: 10%;
+        top: 15%;
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .info-text {
+        left: 10%;
+        top: 15%;
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .info-text {
+        left: 5%;
+        top: 15%;
+        font-size: 1.2rem;
+    }
+}
+
+.additional-info {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.additional-info h2 {
+    font-size: 2.5rem;
+    color: #f0f0f0;
+}
+
+.additional-info p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #dcdcdc;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

@@ -1,0 +1,329 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-y: auto; /* Enable scrolling within this section if content exceeds screen */
+}
+
+/* Background Section */
+.background-section {
+  background-image: url('../public/assets/background9.jpg'); /* Ensure this path is correct */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.wehire-content {
+  height: 100%;
+}
+
+.wehire-section {
+  padding-top: 70px;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+/* Desktop Default Styles */
+.hero-section {
+  text-align: center;
+  padding: 4rem 0;
+}
+
+.hero-section h1 {
+  font-size: 2.5rem;
+  color: #ffffff;
+  line-height: 1.3;
+}
+
+.hero-section p {
+  font-size: 1.2rem;
+  color: #ffffff;
+  line-height: 1.5;
+}
+
+.cta-button {
+  background-color: #ffa000;
+  color: #ffffff;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 2rem;
+}
+
+.cta-button:hover {
+  background-color: #ff8a00;
+}
+
+/* Animation for Button (Optional) */
+.animate-jump {
+  animation: jump-button 0.8s ease;
+}
+
+@keyframes jump-button {
+  0% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(-5px);
+  }
+  100% {
+      transform: translateY(0);
+  }
+}
+
+/* Positions Section */
+.positions-section {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.positions-section h2 {
+  font-size: 2rem;
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+
+.positions {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  height: 100%;
+}
+
+.position-card {
+  margin-top: 0.75rem;
+  background-color: #333;
+  padding: 1.5rem;
+  border-radius: 10px;
+  width: 250px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.position-card h3 {
+  color: #ff8a00;
+  margin-bottom: 0.5rem;
+}
+
+.position-card p {
+  color: #d1d1d1;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.position-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.more-info-button {
+  margin-top: 1rem;
+  background-color: transparent;
+  border: 1px solid #ff8a00;
+  color: #ff8a00;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.more-info-button:hover {
+  background-color: #ff8a00;
+  color: #ffffff;
+}
+
+/* Modal Styles */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+.modal-content {
+  background-color: #444;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 600px;
+  color: #fff;
+  position: relative;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #ff8a00;
+}
+
+.modal-content h2 {
+  margin-top: 0;
+  color: #ff8a00;
+}
+
+.modal-content p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.modal-content ul {
+  padding-left: 20px;
+  color: #d1d1d1;
+}
+
+.modal-content ul li {
+  margin-bottom: 0.5rem;
+}
+
+.contact-email {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+.email-text {
+  color: #ff8a00;
+  cursor: pointer;
+}
+
+.email-instruction {
+  font-size: 0.8rem;
+  color: #d1d1d1;
+}
+
+/* Animation for Position Cards */
+.jump-animation {
+  animation: jump 0.8s ease;
+}
+
+@keyframes jump {
+  0% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(-10px);
+  }
+  100% {
+      transform: translateY(0);
+  }
+}
+
+/* Responsive Adjustments for Tablets */
+@media (max-width: 768px) {
+  .hero-section {
+      padding: 2rem 1rem;
+  }
+
+  .hero-section h1 {
+      font-size: 2rem;
+      line-height: 1.2;
+  }
+
+  .hero-section p {
+      font-size: 1rem;
+      margin-bottom: 1rem;
+  }
+
+  .positions-section h2 {
+      font-size: 1.5rem;
+  }
+
+  .wehire-section {
+      overflow-y: auto; /* Enable scrolling for large content */
+  }
+
+  .position-card {
+      width: 80%;
+      padding: 1rem;
+      font-size: 0.9rem;
+  }
+
+  .modal-content {
+      width: 80%;
+      padding: 1.2rem;
+  }
+}
+
+/* Responsive Adjustments for Phones */
+@media (max-width: 480px) {
+  .hero-section {
+      width: 100%;
+      max-width: 90%;
+      margin: 0 auto;
+      text-align: center;
+      padding: 1.5rem 1rem;
+  }
+
+  /* Adjust wehire-section to avoid overlapping with the navbar */
+  .wehire-section {
+      padding-top: 150px; /* Space for navbar and some margin */
+      height: calc(100vh - 100px); /* Adjust height to avoid overflow with navbar */
+      overflow-y: auto;
+      scroll-padding-top: 80px; /* To prevent navbar overlap during scroll */
+  }
+
+  .positions-section {
+      width: 100%;
+      max-width: 90%;
+      margin: 0 auto;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+  }
+
+  .positions {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.8rem;
+      width: 100%;
+  }
+
+  .position-card {
+      width: 100%;
+      max-width: 300px;
+      text-align: center;
+      margin: 0 auto;
+  }
+
+  /* Ensure the modal content is centered and responsive */
+  .modal-content {
+      width: 80%;
+      max-width: 320px;
+      padding: 1rem;
+      margin: 0 auto;
+  }
+}
